@@ -1,0 +1,46 @@
+main {
+    min-height: 100vh;
+    width: 100vw;
+    @include desktop {
+        max-width: 1000px;
+    }
+    h2 {
+        font-family: $headerFont;
+        color: $accentColor;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-family: $headerFont;
+        color: $accentColor;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-family: $textFont;
+        color: $textColor;
+    }
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    > div {
+        width: 100%;
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        article {
+            width: 100%;
+            @include desktop {
+                width: 30%;
+            }
+        }
+    }
+}
