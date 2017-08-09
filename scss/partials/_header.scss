@@ -37,67 +37,50 @@ header {
 nav {
     width: 100%;
     height: 4rem;
-    background-color: transparentize($bgColor, 0.4);
+    background-color: transparentize($bgColor, 0.7);
     display: none;
     @include desktop {
+        box-shadow: 0 -5px 15px $secondaryTextColor;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: fixed;
         top: 0;
+        z-index: 1;
     }
-    .menu-bar {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        > a {
-            width: 4rem;
-            height: 4rem;
-            background-image: url(../img/astrokino.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            opacity: 0.95;
-            display: block;
-        }
-        > ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-        }
-        li {
-            font-family: $headerFont;
-            list-style-type: none;
-            color: $textColor;
-            margin: 0 1rem 0;
-        }
-    }
-
 }
 
-h1 {
-    font-family: $headerFont;
-    font-size: 3.5rem;
-    line-height: 4rem;
-    color: $textColor;
-    text-align: center;
-    @include desktop {
-        font-size: 5rem;
-        line-height: normal;
+.menu-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    > a {
+        width: 4rem;
+        height: 4rem;
+        background-image: url(../img/astrokino.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.95;
+        display: block;
     }
-    + p {
-        font-family: $textFont;
-        font-size: 1.2rem;
-        color: $textColor;
-        text-align: center;
-        width: 80%;
-        margin-top: 1rem;
-        @include desktop {
-            font-size: 1.6rem;
+    > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    li {
+        list-style-type: none;
+        margin: 0 2rem 0;
+        a {
+            font-family: $textFont;
+            color: $textColor;
+            text-decoration: none;
+            text-transform: uppercase;
         }
     }
 }

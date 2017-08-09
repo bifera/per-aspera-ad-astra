@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: $bgColor;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -18,4 +18,32 @@ body {
     background-size: contain;
     position: fixed;
     z-index: -1;
+}
+
+
+h1 {
+    font-family: $headerFont;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    color: $textColor;
+    text-align: center;
+    @include desktop {
+        font-size: 5rem;
+        line-height: normal;
+    }
+    + p {
+        color: $textColor;
+        font-size: 1.2rem;
+        text-align: center;
+        width: 80%;
+        margin-top: 1rem;
+        @include desktop {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+p {
+    font-family: $textFont;
+    line-height: 1.5;
 }

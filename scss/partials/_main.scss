@@ -1,27 +1,39 @@
 main {
     min-height: 100vh;
     width: 100vw;
+    margin-bottom: 8rem;
     @include desktop {
         max-width: 1000px;
     }
-    h2 {
-        font-family: $headerFont;
-        color: $accentColor;
-        font-size: 2.5rem;
-        text-align: center;
-    }
+}
 
-    h3 {
-        font-family: $headerFont;
-        color: $accentColor;
-        font-size: 1.2rem;
-    }
 
-    p {
-        font-family: $textFont;
-        color: $textColor;
+h2 {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 1px;
+    font-family: $headerFont;
+    color: $accentColor;
+    border-top: 1px solid transparentize($textColor, .9);
+    font-size: 1.5rem;
+    text-align: center;
+    @include desktop {
+        margin: 4rem 0;
+        border-top: 0;
+        border-bottom: 1px solid transparentize($textColor, .9);
     }
 }
+
+h3 {
+    font-family: $headerFont;
+    font-size: 1.2rem;
+    color: $bgColor;
+    border-bottom: 1px solid $secondaryTextColor;
+    box-shadow: 0 0 7px $accentColor;
+    padding: .5rem;
+    text-align: right;
+}
+
 
 section {
     width: 100%;
@@ -37,12 +49,53 @@ section {
             justify-content: space-between;
             align-items: flex-start;
         }
-        article {
-            width: 100%;
-            padding: 0 1rem;
-            @include desktop {
-                width: 40%;
-            }
+    }
+    article {
+        width: 100%;
+        border: 1px solid transparentize($textColor, .4);
+        background-color: $textColor;
+        position: relative;
+        @include desktop {
+            width: 49%;
         }
     }
+    p {
+        width: 100%;
+        overflow: hidden;
+        padding: .75rem;
+        color: $altColor;
+        @include desktop {
+            height: 15rem;
+        }
+    }
+}
+
+.article-image {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include desktop {
+        height: 20rem;
+    }
+}
+
+.image-proj-01 {
+    background-image: url(../img/planetarium/06.jpg);
+}
+.image-proj-02 {
+    background-image: url(../img/planetarium/09.jpg);
+}
+.image-plan-01 {
+    background-image: url(../img/planetarium/10.jpg);
+}
+.image-plan-02 {
+    background-image: url(../img/planetarium/04.jpg);
+}
+.image-onas-01 {
+    background-image: url(../img/planetarium/03.jpg);
+}
+.image-onas-02 {
+    background-image: url(../img/planetarium/07.jpg);
 }
