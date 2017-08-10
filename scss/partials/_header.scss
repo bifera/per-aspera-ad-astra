@@ -1,20 +1,19 @@
 header {
     width: 100vw;
     height: 100vh;
-    @include desktop {
-        width: 99vw;
-    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(../img/bgMobile.jpg);
-    @include desktop {
-        background-image: url(../img/bgDesktop.jpg);
-    }
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    @include desktop {
+        width: 99vw;
+        box-shadow: 0 -5px 15px $secondaryTextColor;
+        background-image: url(../img/bgDesktop.jpg);
+    }
     > a {
         width: 35vw;
         height: 35vw;
