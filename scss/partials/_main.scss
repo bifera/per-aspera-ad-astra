@@ -34,6 +34,13 @@ h3 {
     text-align: right;
 }
 
+h4 {
+    font-family: $textFont;
+    font-size: 1.05rem;
+    color: $altColor;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
 
 section {
     width: 100%;
@@ -48,6 +55,7 @@ section {
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
+            margin-bottom: 2rem;
         }
     }
     article {
@@ -57,6 +65,11 @@ section {
         position: relative;
         @include desktop {
             width: 49%;
+        }
+        &.full-width {
+            @include desktop {
+                width: 100%;
+            }
         }
     }
     p {
@@ -87,6 +100,15 @@ section {
 .image-proj-02 {
     background-image: url(../img/planetarium/09.jpg);
 }
+.image-proj-03 {
+    background-image: url(../img/planetarium/08.jpg);
+}
+.image-proj-04 {
+    background-image: url(../img/planetarium/11.jpg);
+}
+.image-tick-01 {
+    background-image: url(../img/planetarium/05.jpg);
+}
 .image-plan-01 {
     background-image: url(../img/planetarium/10.jpg);
 }
@@ -98,4 +120,17 @@ section {
 }
 .image-onas-02 {
     background-image: url(../img/planetarium/07.jpg);
+}
+
+.tickets {
+    width: 100%;
+    padding: .75rem;
+    li {
+        list-style-type: none;
+        font-family: $textFont;
+        color: $altColor;
+        span {
+            font-weight: bold;
+        }
+    }
 }
