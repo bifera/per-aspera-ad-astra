@@ -8,15 +8,14 @@ body {
 
 .background-layer {
     width: 100vw;
-    height: 100vh;
+    height: 2000vh;
     @include desktop {
-        max-width: 1000px;
     }
-    background-image: url(../img/hubble-observes-one-of-a-kind-star-nicknamed-nasty_17754652960_o-orig.jpg);
+    background-image: url(../img/backgrounds/ep_naturalblack.png);
     background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: repeat;
     position: fixed;
+    opacity: 0.5;
     z-index: -1;
 }
 
