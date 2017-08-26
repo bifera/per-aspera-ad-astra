@@ -1,21 +1,37 @@
 footer {
     width: 100%;
-    height: 4rem;
     background-color: transparentize($bgColor, 0.3);
     display: none;
     @include desktop {
         box-shadow: 0 5px 15px $secondaryTextColor;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        bottom: 0;
-        z-index: 1;
     }
-    p {
+    > p {
+        width: 100%;
+        min-height: 4rem;
+        padding-top: 1rem;
         color: $textColor;
-        @include desktop {
-            max-width: 1000px;
+        text-align: center;
+        box-shadow: 0 5px 15px $secondaryTextColor;
+    }
+    section {
+        margin-top: 4rem;
+        width: 100vw;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        > div {
+            width: 49%;
+            height: 300px;
+            border: 1px solid $textColor;
+            background-color: $textColor;
+
         }
     }
 }

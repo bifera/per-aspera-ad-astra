@@ -3,7 +3,7 @@ main {
     width: 100vw;
     margin-bottom: 8rem;
     @include desktop {
-        max-width: 1000px;
+        max-width: 1200px;
     }
 }
 
@@ -60,7 +60,7 @@ section {
     }
     article {
         width: 100%;
-        border: 1px solid transparentize($textColor, .4);
+        border: 1px solid $textColor;
         background-color: $textColor;
         position: relative;
         @include desktop {
